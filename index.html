@@ -1,4 +1,13 @@
 <!doctype html>
+<!--
+  项目入口 HTML 文件
+  作用：
+  1. 声明页面语言为中文（lang="zh-CN"）
+  2. 设置字符编码 UTF-8 和视口（适配移动端）
+  3. 定义 <div id="app"> 作为 Vue 应用的挂载点
+  4. 引入 /src/main.js 作为前端入口脚本（ES Module 方式）
+  注意：Vue 的所有页面内容都通过 main.js 动态渲染到 #app 中，此文件本身不包含业务内容
+-->
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +15,9 @@
     <title>AI Vision Web</title>
   </head>
   <body>
+    <!-- Vue 应用挂载点：main.js 中 createApp(App).mount('#app') 会将整个前端渲染到这里 -->
     <div id="app"></div>
+    <!-- 使用 ES Module 方式加载前端入口文件，Vite 会自动处理模块依赖和热更新 -->
     <script type="module" src="/src/main.js"></script>
   </body>
   </html>
